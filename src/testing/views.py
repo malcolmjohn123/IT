@@ -13,12 +13,7 @@ from .models import TestingClaims
 class Homepage(View):
     def get(self, request):
         template_name = 'index.html'
-        context = TestingClaims.objects.raw('select LVLID2, LVLDESC2, MEMID,sum(paidamt) as paidamt from testing_claims a\
-                                                where not exists (select 1 from testing_elig b\
-                                                where a.memid=b.memid)\
-                                                group by LVLID2, LVLDESC2, MEMID')
-
-        return render(request, template_name, {'context': context})
+        return render(request, template_name, {})
 
 
 class Login(View):
@@ -26,5 +21,10 @@ class Login(View):
         template_name = 'login.html'
         return render(request, template_name, {})
 
+
+class CCMember(View):
+    def get(self, request):
+        template_name = 'ccmembers.html'
+        return render(request, template_name, {})
 
 
