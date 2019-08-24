@@ -1,11 +1,11 @@
 {% load static %}
 <!DOCTYPE html>
 <html>
- 
+
 <head>
     <meta charset="utf-8">
     <title>ZingSoft Demo</title>
- 
+
     <script src="{% static 'js/zingchart.min.js' %}"></script>
     <style>
         html,
@@ -15,23 +15,23 @@
             margin: 0;
             padding: 0;
         }
- 
+
         #myChart {
             height: 100%;
             width: 100%;
             min-height: 150px;
         }
- 
+
         .zc-ref {
             display: none;
         }
- 
+
         zing-grid[loading] {
             height: 450px;
         }
     </style>
 </head>
- 
+
 <body>
     <div id="myChart"><a class="zc-ref" href="https://www.zingchart.com">Powered by ZingChart</a></div>
     <script>
@@ -39,10 +39,7 @@
         var myConfig = {
             "type": "venn",
             "title": {
-                "text": "Peanut Butter & Jelly Sandwiches"
-            },
-            "subtitle": {
-                "text": "Have two mandatory ingredients:"
+                "text": "RxClaims membermatch"
             },
             "plot": {
                 "value-box": {
@@ -53,25 +50,25 @@
                     "font-weight": "normal",
                     "font-style": "italic",
                     "joined": {
-                        "text": "PB<br>&J",
+                        "text": "Memmatched",
                         "font-weight": "bold",
                         "font-style": "normal"
                     }
                 }
             },
             "series": [{
-                    "values": [100],
-                    "join": [15],
-                    "text": "Peanut Butter",
+                    "values": [{{ rxclaims|length }}],
+                    "join": [{{ matched|length }}],
+                    "text": "CC<br>members",
                     "background-color": "#331a00",
                     "alpha": 0.9,
                     "border-color": "#663300",
                     "border-width": 2
                 },
                 {
-                    "values": [100],
-                    "join": [15],
-                    "text": "Jelly",
+                    "values": [{{ elig|length }}],
+                    "join": [0],
+                    "text": "DD members",
                     "background-color": "#330066",
                     "alpha": 0.9,
                     "border-color": "#663300",
@@ -79,7 +76,7 @@
                 }
             ]
         };
- 
+
         zingchart.render({
             id: 'myChart',
             data: myConfig,
@@ -88,5 +85,5 @@
         });
     </script>
 </body>
- 
+
 </html>
