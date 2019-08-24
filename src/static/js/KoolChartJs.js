@@ -10,7 +10,16 @@
 ! function(t) {
     if ("object" == typeof exports && "undefined" != typeof module) module.exports = t();
     else if ("function" == typeof define && define.amd) define([], t);
-    else {
+    else { // -----------------------------------------------------------------------------
+        // KoolChart License Key
+        //
+        // Product Name : KoolChart v6.0
+        // License Type : Premium License
+        // Product No : 8E58-CE03-C835-7EDQ
+        // Authenticated Server : *.koolchart.com
+        // Expiration Date : unlimited
+        //
+        var KoolChartLicense = "bcb0f5cbd7ea6287e6562b71e51fc15eec27ab954d6877eb6bcfaf97d7230ed8:6500300b33512044504542373a2d43354e334f3820434c2d56333a3032452e43302d2038503556453a384b3a354c2d20502a523a2d4536202e6d306f2063452e4c743a727461206843633a6c326f306f316b392e302a343a304838";
         var e;
         e = "undefined" != typeof window ? window : "undefined" != typeof global ? global : "undefined" != typeof self ? self : this, e.Chart = t()
     }
@@ -2866,14 +2875,14 @@
                             else if (a._view.hasOwnProperty(n))
                                 if (i === a._view[n]);
                                 else if ("string" == typeof i) try {
-                                var o = e.color(a._model[n]).mix(e.color(a._start[n]), t);
-                                a._view[n] = o.rgbString()
-                            } catch (t) {
-                                a._view[n] = i
-                            } else if ("number" == typeof i) {
-                                var r = void 0 !== a._start[n] && isNaN(a._start[n]) === !1 ? a._start[n] : 0;
-                                a._view[n] = (a._model[n] - r) * t + r
-                            } else a._view[n] = i;
+                                    var o = e.color(a._model[n]).mix(e.color(a._start[n]), t);
+                                    a._view[n] = o.rgbString()
+                                } catch (t) {
+                                    a._view[n] = i
+                                } else if ("number" == typeof i) {
+                                    var r = void 0 !== a._start[n] && isNaN(a._start[n]) === !1 ? a._start[n] : 0;
+                                    a._view[n] = (a._model[n] - r) * t + r
+                                } else a._view[n] = i;
                             else "number" != typeof i || isNaN(a._view[n]) ? a._view[n] = i : a._view[n] = i * t
                         }, a), a)
                     },
@@ -8879,14 +8888,14 @@
                             else if (a._view.hasOwnProperty(n))
                                 if (i === a._view[n]);
                                 else if ("string" == typeof i) try {
-                                var o = e.color(a._model[n]).mix(e.color(a._start[n]), t);
-                                a._view[n] = o.rgbString()
-                            } catch (t) {
-                                a._view[n] = i
-                            } else if ("number" == typeof i) {
-                                var r = void 0 !== a._start[n] && isNaN(a._start[n]) === !1 ? a._start[n] : 0;
-                                a._view[n] = (a._model[n] - r) * t + r
-                            } else a._view[n] = i;
+                                    var o = e.color(a._model[n]).mix(e.color(a._start[n]), t);
+                                    a._view[n] = o.rgbString()
+                                } catch (t) {
+                                    a._view[n] = i
+                                } else if ("number" == typeof i) {
+                                    var r = void 0 !== a._start[n] && isNaN(a._start[n]) === !1 ? a._start[n] : 0;
+                                    a._view[n] = (a._model[n] - r) * t + r
+                                } else a._view[n] = i;
                             else "number" != typeof i || isNaN(a._view[n]) ? a._view[n] = i : a._view[n] = i * t
                         }, a), a)
                     },

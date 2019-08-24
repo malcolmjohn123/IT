@@ -39,7 +39,7 @@
         var myConfig = {
             "type": "venn",
             "title": {
-                "text": "Claims and Elig Venn Diagram"
+                "text": "RxClaims and Elig Venn Diagram"
             },
             "subtitle": {
 
@@ -53,25 +53,25 @@
                     "font-weight": "normal",
                     "font-style": "italic",
                     "joined": {
-                        "text": "PB<br>&J",
+                        "text": "Mem matched",
                         "font-weight": "bold",
                         "font-style": "normal"
                     }
                 }
             },
             "series": [{
-                    "values": [100],
-                    "join": [15],
-                    "text": "Peanut Butter",
+                    "values": [{{ rxclaims|length }}],
+                    "join": [{{ matched|length }}],
+                    "text": "CC<br>members",
                     "background-color": "#331a00",
                     "alpha": 0.9,
                     "border-color": "#663300",
                     "border-width": 2
                 },
                 {
-                    "values": [100],
-                    "join": [15],
-                    "text": "Jelly",
+                    "values": [{{ elig|length }}],
+                    "join": [0],
+                    "text": "DD members",
                     "background-color": "#330066",
                     "alpha": 0.9,
                     "border-color": "#663300",
@@ -137,9 +137,9 @@ new Chart(document.getElementById("bar-chart"), {
       labels: ["Group1", "Group2", "Group3", "Group4", "Group5"],
       datasets: [
         {
-          label: "CC Members Count",
+          label: "CC Members Count)",
           backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
-          data: [2478,5267,734,784,433]
+          data: [90,80,150,20,30]
         }
       ]
     },

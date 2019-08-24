@@ -110,11 +110,24 @@
             <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="{% url 'visualization:login' %}">Login</a>
             <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="{% url 'visualization:ccmembers' %}">CC Members</a>
+          <a class="dropdown-item" href="{% url 'visualization:ccmembersclaims' %}">CC Members Claims</a>
+
+          <a class="dropdown-item" href="{% url 'visualization:ccmembersrxclaims' %}">CC Members RxClaims</a>
+
+{#            <div class="dropdown-divider"></div>#}
+{#            <a class="dropdown-item" href="{% url 'visualization:membermatch' %}">Member Match</a>#}
+{#            <div class="dropdown-divider"></div>#}
+
+         <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="{% url 'visualization:loatestcase' %}">Loa</a>
+            <div class="dropdown-divider"></div>
 
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="404.html">Test5</a>
-          <a class="dropdown-item" href="blank.html">Test6</a>
+            <a class="dropdown-item" href="{% url 'visualization:mmem' %}">Mmem</a>
+            <div class="dropdown-divider"></div>
+
+
+
             <a class="dropdown-item" href="blank.html">Test7</a>
             <a class="dropdown-item" href="blank.html">Test8</a>
             <div class="dropdown-divider"></div>
